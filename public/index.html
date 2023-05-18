@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>unspotify-online</title>
+</head>
+
+<body>
+    <div class="container">
+        <form onsubmit="searchQuery(event)">
+            <input type="search" name="" id="searchBarID">
+            <button>Search</button>
+        </form>
+
+        <div class="results" onclick="handleVideoClick(event)">
+            <template class="results-template">
+                <div class="video-container">
+                    <div class="thumbnail"><img>
+                        <div class="duration"></div>
+                    </div>
+                    <div class="video-details">
+                        <div class="video-title"></div>
+                        <div class="video-channel"></div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="error-container"></div>
+    </div>
+
+    <div class="audio-ctrl">
+        <audio controls>
+            <source src="">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
